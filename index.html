@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Madlib</title>
 
-    <link rel="stylesheet" href="./css/style.css">
-    <script defer src="js/script.js"></script>
-</head>
-<body>
-    
-</body>
+        <link rel="stylesheet" href="./css/style.css">
+        <script defer src="js/script.js"></script>
+    </head>
+    <body>
+        <div id="game" class="hidden">
+            <label for="fill-in">Enter a<span id="speech-part"></span>:</label>
+            <input type="text" id="fill-in">
+            <button onclick="getWords(); document.getElementById('fill-in').value = ''" id="submit">Submit</button>
+        </div>
+
+        <h1 id="heading">Play Madlibs!</h1>
+        <p id="story"></p>
+        <button onclick="getWords()" id="play">PLAY!</button>
+    </body>
 </html>
